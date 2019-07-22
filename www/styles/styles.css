@@ -1,0 +1,327 @@
+
+    #logotipo{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+      
+    nav {
+    width: 100%;
+     height: 60px;
+    background-color: #A9BCF5;
+       }
+
+nav li{
+   padding-right: 25px;
+  }
+
+.text-menu{
+    font: 20px bold "Arial Black";
+}
+
+#slider{
+    margin-top: 60px;
+}
+
+#slider .carousel-item{
+    height: 300px;
+    width: 100%;
+}
+
+#cards{
+    margin-top: 20px;
+    max-width: 100%;
+    margin-left:0;
+  }
+
+.col-sm-4{
+  position: relative;
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+
+
+  .social-icons {
+    float: right;
+}
+
+    .social-icons a {
+        float: left;
+        margin-left: 12px;
+    }
+
+.btn{
+  cursor:pointer;
+}
+
+.btn-facebook {
+    color: #3b5998;
+}
+
+.btn-twitter{
+    color: #54a4d6;
+}
+
+.btn-google {
+    color: #d73d32;
+}
+  
+#primary_nav_wrap {
+    margin-top: 0;
+}
+
+    #primary_nav_wrap ul {
+        list-style: none;
+        position: relative;
+        float: left;
+        margin: 0;
+        padding: 0;
+        cursor: pointer;
+    }
+
+        #primary_nav_wrap ul a {
+            display: block;
+            color: #ddd;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2em;
+            line-height: 32px;
+            padding: 0 15px;
+            font-family: "HelveticaNeue","Helvetica Neue",Helvetica,Arial,sans-serif;
+        }
+
+        #primary_nav_wrap ul li {
+            position: relative;
+            float: left;
+            margin: 0;
+            padding: 0;
+        }
+
+            #primary_nav_wrap ul li.current-menu-item {
+                background: #ddd;
+            }
+
+            #primary_nav_wrap ul li a:hover {
+                background: #2E64FE;
+                color: #fff !important;
+            }
+
+        #primary_nav_wrap ul ul {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: #2E64FE;
+            padding: 0;
+        }
+
+            #primary_nav_wrap ul ul li {
+                float: none;
+                width: 200px;
+            }
+
+            #primary_nav_wrap ul ul a {
+                line-height: 120%;
+                padding: 10px 15px;
+            }
+
+            #primary_nav_wrap ul ul ul {
+                top: 0;
+                left: 100%;
+                
+            }
+
+        #primary_nav_wrap ul li:hover > ul {
+            display: block;
+            cursor: pointer;
+        }
+
+        #primary_nav_wrap .sub-menu a {
+            font-size: 1em !important;
+            font-weight: 300px;
+        }
+
+        #primary_nav_wrap .sub-menu a:hover {
+            background: #ddd;
+            color: #333 !important;
+        }
+ #divCard{
+    margin-top: 100px;
+ } 
+
+ #divTabela{
+    margin-top: 40px;
+ }
+
+ #divFormularioJogador, #divFormularioEquipa,#divFormularioModalidade,
+ #divFormularioTorneio,#divInscreverNoTorneio{
+   margin-top: 90px;
+   width: 750px;
+   position: relative;
+ }
+
+
+ .container-div{
+     margin-top: 80px;
+     height: 600px;
+ }
+
+ .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+ }
+
+.card {
+    border-radius: 0;
+    border: none;
+}
+
+.card-body-width {
+    padding: 0.5rem;
+    background: white;
+    width: 600px; 
+    border: inset;
+    margin-bottom: 50px;	
+}
+
+.card-body {
+    padding: 0.5rem;
+    background: lightgrey;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;    
+}
+
+.card-text {
+    color: black;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="date"],
+input[type="time"],input[type="number"]{
+    width: 350px;
+    float: left;
+	border: inset;
+}
+
+#localidadeJogador, #localidadeEquipa, #categoriaEquipa,#modalidadeEquipa,
+#localidadeTorneio, #modalidadeTorneio, #tiposdetorneio, #equipaTorneio, 
+#jogadorTorneio, #modalidadeJogador, #generoJogador, #generoTorneio,#generoEquipa{
+    width: 350px;
+    float: left;
+	border: inset;
+}
+
+label{
+    font-weight: 450;
+}
+
+.btn-outline-danger {
+    color: #000;
+	font-weight: bold;
+    border-color: #dc3545;
+}
+
+.btn-outline-success {
+    color: #000;
+	font-weight: bold;
+    border-color: #28a745;
+}
+
+.btn-outline-primary {
+    color:#000;
+	font-weight: bold;
+    border-color: #007bff;
+}
+
+.w-50 {
+    width: 170px!important;
+    float: left;
+}
+
+.largura {
+	width: 25px!important;
+}
+
+.altura{
+	width: 25px!important;
+}
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px; 
+    margin-left: -150px; 
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; 
+    border-radius: 2px;
+    padding: 16px; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%; 
+    bottom: 30px; 
+}
+
+#snackbar.show {
+    visibility: visible; 
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@keyframes fadein {
+    from {
+        bottom: 0;
+        opacity: 0;
+    }
+    to {
+        bottom: 30px;
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        bottom: 30px;
+        opacity: 1;
+    }
+    to {
+        bottom: 0;
+        opacity: 0;
+    }
+}
+
+.classificacao > tbody > tr:first-child{
+    background-color: #b2dffa;
+}
+
+
+
+
+
+
+  

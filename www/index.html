@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no" />
+    <meta name="description" content="Porgramação Internet" />
+    <meta name="keywords" content="HTML,CSS,XML,Javascript" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo_icon.ico" />
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css"
+        href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/tabela.css" />
+    <link rel="stylesheet" type="text/css" href="styles/grafico.css" />
+    <!-- JavaScript -->
+    <script type="text/javascript" src="scripts/domHelper.js"></script>
+    <script type="text/javascript" src="scripts/utils.js"></script>
+    <script type="text/javascript" src="scripts/genero.js"></script>
+    <script type="text/javascript" src="scripts/localidade.js"></script>
+    <script type="text/javascript" src="scripts/jogador.js"></script>
+    <script type="text/javascript" src="scripts/modalidade.js"></script>
+    <script type="text/javascript" src="scripts/estatistica.js"></script>
+    <script type="text/javascript" src="scripts/equipa.js"></script>
+    <script type="text/javascript" src="scripts/jogo.js"></script>
+    <script type="text/javascript" src="scripts/tiposDeTorneio.js"></script>
+    <script type="text/javascript" src="scripts/torneio.js"></script>
+    <script type="text/javascript" src="scripts/informacao.js"></script>
+    <title>Gestorneio - Gestão de Torneios Desportivos e Sociais</title>
+</head>
+
+<body>
+    <!-- Nav Menu -->
+    <header>
+        <nav id="primary_nav_wrap" class="navbar navbar-expand-md navbar-dark fixed-top bg-blue">
+            <div class="d-flex w-25 order-0">
+                <a class="navbar-brand mr-1 logo" href="index.html">
+                    <img id="logotipo" src="images/logo.jpg" alt="logotipo" />
+
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <h6 style="margin-top: 20px;">GESTORNEIO</h6>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav collapse navbar-collapse mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark text-menu" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark text-menu">Gestor de Torneio</a>
+                        <ul class="sub-menu">
+                            <li class="nav-item"><a class="nav-link text-menu">Tipo de torneio</a>
+                                <ul class="sub-menu">
+                                    <li><a class="nav-link" href="javascript:info.getTorneiosPorTipo('individual');">
+                                            Titulo individual</a></li>
+                                    <li><a class="nav-link" href="javascript:info.getTorneiosPorTipo('equipa');">Por
+                                            equipa</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a class="nav-link" href="javascript:info.menuGetJogadores();">Jogadores</a></li>
+                            <li><a class="nav-link" href="javascript:info.menuGetEquipas();">Equipas</a></li>
+                            <li><a class="nav-link" href="javascript:info.visualizarEstatistica();">
+                                    Estatisticas</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark text-menu"
+                            href="javascript:info.showTorneiosDisponiveis();">Torneios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark text-menu"
+                            href="javascript:info.menuGetModalidades();">Modalidades</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!--Container -->
+    <div class="container">
+        <main role="main" class="pb-3">
+            <!-- Div Central/Informação -->
+            <div id="divCentral">
+                <!-- div carousel -->
+                <div id="slider" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#slider" data-slide-to="1"></li>
+                        <li data-target="#slider" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="images/basketball.png" alt="basketball slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/futsal.png" alt="futsal slide">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="images/voleibol.jpg" alt="voleibol slide">
+                        </div>
+                    </div>
+                    <a class="left carousel-control-prev" href="#slider" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control-next" href="#slider" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!-- end div carousel -->
+                <!-- Div cards informação -->
+                <div id="cards">
+                    <h5>Inscrições em torneios</h5>
+                    <hr style="border: 2px solid blue; height: 50%;" />
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img class="card-img-top" src="images/basket.jpg" alt="baskte imagem">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Torneio de verão de basketball
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img class="card-img-top" src="images/volei.jpg" alt="volei imagem">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Torneio de verão de voleibol
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <img class="card-img-top" src="images/futsal1.png" alt="futsal imagem">
+                                <div class="card-body">
+                                    <p class="card-text">
+                                        Torneio de verão de futsal
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- end div cards informação -->
+            </div>
+            <!-- end iv central -->
+            <!--Formulario Jogador -->
+            <div id="divFormularioJogador" style="display:none;">
+                <h5>Adicionar ou editar jogador</h5>
+                <div class="card mt-3 card-form">
+                    <div class="card-body-width">
+                        <form id="formJogador" class="ml-3 mt-3" action="javascript:info.processarJogador('create');">
+                            <input id="idJogador" type="hidden" />
+                            <div class="form-group row">
+                                <label for="nomeJogador" class="col-sm-4 col-form-label">Nome</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="nomeJogador" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dataNascimento" class="col-sm-4 col-form-label">Data de Nascimento</label>
+                                <div class="col-sm-8">
+                                    <input type="date" class="form-control" id="dataNascimento" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="generoJogador" class="col-sm-4 col-form-label">Genero</label>
+                                <div class="col-sm-8">
+                                    <select id="generoJogador" class="form-control" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="localidadeJogador" class="col-sm-4 col-form-label">Localidade</label>
+                                <div class="col-sm-8">
+                                    <select id="localidadeJogador" class="form-control" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="modalidadeJogador" class="col-sm-4 col-form-label">Modalidade</label>
+                                <div class="col-sm-8">
+                                    <select id="modalidadeJogador" class="form-control" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4 "></div>
+                                <div class="col-sm-8">
+                                    <input class="btn btn-outline-success btn-sm w-50 mr-2" type="submit"
+                                        value="Guardar" />
+                                    <a class="btn btn-outline-danger btn-sm w-50"
+                                        href="javascript:info.menuGetJogadores();">Cancelar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--Formulario Equipa -->
+            <div id="divFormularioEquipa" style="display:none;">
+                <h5>Adicionar ou editar equipa</h5>
+                <div class="card mt-3 card-form">
+                    <div class="card-body-width">
+                        <form id="formEquipa" class="ml-3 mt-3" action="javascript:info.processarEquipa('create');">
+                            <input id="idEquipa" type="hidden" />
+                            <div class="form-group row">
+                                <label for="nomeEquipa" class="col-sm-4 col-form-label">Nome</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="nomeEquipa" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="localidadeEquipa" class="col-sm-4 col-form-label">Localidade</label>
+                                <div class="col-sm-8">
+                                    <select id="localidadeEquipa" class="form-control" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="generoEquipa" class="col-sm-4 col-form-label">Genero</label>
+                                <div class="col-sm-8">
+                                    <select id="generoEquipa" class="form-control" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="modalidadeEquipa" class="col-sm-4 col-form-label">Modalidade</label>
+                                <div class="col-sm-8">
+                                    <select id="modalidadeEquipa" class="form-control" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4 "></div>
+                                <div class="col-sm-8">
+                                    <input class="btn btn-outline-success btn-sm w-50 mr-2" type="submit"
+                                        value="Guardar" />
+                                    <a class="btn btn-outline-danger btn-sm w-50"
+                                        href="javascript:info.menuGetEquipas();">Cancelar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--Formulario Torneio -->
+            <div id="divFormularioTorneio" style="display:none;">
+                <h5>Adicionar ou editar torneio</h5>
+                <div class="card mt-3">
+                    <div class="card-body-width">
+                        <form id="formTorneio" class="ml-3 mt-3" action="javascript:info.processarTorneio('create')">
+                            <input id="idTorneio" type="hidden" />
+                            <div class="form-group row">
+                                <label for="nomeTorneio" class="col-sm-4 col-form-label">Nome</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="nomeTorneio" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="localidadeTorneio" class="col-sm-4 col-form-label">Localidade</label>
+                                <div class="col-sm-8">
+                                    <select id="localidadeTorneio" class="form-control" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="modalidadeTorneio" class="col-sm-4 col-form-label">Modalidade</label>
+                                <div class="col-sm-8">
+                                    <select id="modalidadeTorneio" class="form-control" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="generoTorneio" class="col-sm-4 col-form-label">Genero</label>
+                                <div class="col-sm-8">
+                                    <select id="generoTorneio" class="form-control" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="tiposdetorneio" class="col-sm-4 col-form-label">Tipo</label>
+                                <div class="col-sm-8">
+                                    <select id="tiposdetorneio" class="form-control" required></select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="dataTorneio" class="col-sm-4 col-form-label">Data</label>
+                                <div class="col-sm-8">
+                                    <input type="date" class="form-control" id="dataTorneio" required />
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="vencedor" class="col-sm-4 col-form-label">Vencedor</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="vencedor" value="N/A" disabled />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4 "></div>
+                                <div class="col-sm-8">
+                                    <input class="btn btn-outline-success btn-sm w-50 mr-2" type="submit"
+                                        value="Guardar" />
+                                    <a class="btn btn-outline-danger btn-sm w-50"
+                                        href="javascript:info.mostrarTorneioPorTipo();">Cancelar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--Formulario Modalidade -->
+            <div id="divFormularioModalidade" style="display:none;">
+                <h5>Adicionar ou editar modalidade</h5>
+                <div class="card mt-3">
+                    <div class="card-body-width">
+                        <form id="formModalidade" class="ml-3 mt-3"
+                            action="javascript:info.processarModalidade('create')">
+                            <input id="idModalidade" type="hidden" />
+                            <div class="form-group row">
+                                <label for="momeModalidade" class="col-sm-4 col-form-label">Nome</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="momeModalidade" required />
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-4 "></div>
+                                <div class="col-sm-8">
+                                    <input class="btn btn-outline-success btn-sm w-50 mr-2" type="submit"
+                                        value="Guardar" />
+                                    <a class="btn btn-outline-danger btn-sm w-50"
+                                        href="javascript:info.menuGetModalidades();">Cancelar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <div id="snackbar">Mostrar mensagem de erro e informação</div>
+    <div class="footer navbar-fixed-bottom">
+        <footer class="border-top footer bg-dark text-white">
+            <div class="container">
+                &copy; Gestão de torneios desportivos e sociais - Projeto PI 2019
+                <div class="social-icons">
+                    <a href="#" class="btn-facebook"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="#" class="btn-twitter"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="#" class="btn-google"><i class="fa fa-google fa-lg"></i></a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- para datatable -->
+<script src="http://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<!-- para estatisticas(criar graficos) -->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</html>
