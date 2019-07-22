@@ -1,5 +1,5 @@
 ## Projeto PI - Gestorneio
-Programação para a Interne
+Programação para a Internet
 
 ### Aplicação Web a realizar
 Aplicação Web para Gestão de Torneios Desportivos e Sociais
